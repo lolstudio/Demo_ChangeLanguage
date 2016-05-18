@@ -37,6 +37,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            //http://my.oschina.net/u/1256344/blog/176025
+            switchLanguage(Locale.JAPAN);
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+        }
+    }
+
     /**
      * 获取系统语言，格式为TW、JP、CN
      **/
